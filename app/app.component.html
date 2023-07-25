@@ -1,2 +1,29 @@
 <hello name="{{ name }}"></hello>
 <p>Start editing to see some magic happen :)</p>
+<!--
+<div class="user-details">
+  <h2>User Details</h2>
+  <div>
+    <p><strong>ID:</strong> {{ users.data.id }}</p>
+    <p><strong>Email:</strong> {{ users.data.email }}</p>
+    <p><strong>First Name:</strong> {{ users.data.first_name }}</p>
+    <p><strong>Last Name:</strong> {{ users.data.last_name }}</p>
+    <p><strong>Avatar:</strong></p>
+    <img [src]="users.data.avatar" alt="User Avatar" />
+  </div>
+</div>
+-->
+
+<div class="user-details-container">
+  <div *ngFor="let user of users.data" class="user-details">
+    <h2 class="user-name">
+      User Details - {{ user.first_name }} {{ user.last_name }}
+    </h2>
+    <div>
+      <p><strong>ID:</strong> {{ user.id }}</p>
+      <p><strong>Email:</strong> {{ user.email }}</p>
+      <p><strong>Avatar:</strong></p>
+      <img [src]="user.avatar" alt="User Avatar" />
+    </div>
+  </div>
+</div>
