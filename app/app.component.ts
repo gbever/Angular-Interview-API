@@ -19,11 +19,10 @@ export class AppComponent implements OnInit {
         console.log('data response', this.users);
       });
     */
-    /*
+
     this.api.get('users?page=2').subscribe((res) => {
       this.users = res;
       console.log('data response', this.users);
     });
-    */
   }
 }
